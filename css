@@ -1,0 +1,167 @@
+* Estilo Geral */
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(135deg, #000000, #013c65, #00274b); /* Gradiente de azul, amarelo e cinza */
+    color: #fff;
+}
+
+/* Cabeçalho */
+header {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.305);
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+}
+
+/* Container do título e login */
+.header-container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Estilos do título */
+.site-title {
+    font-size: 2.5rem;
+    color: #ffffff;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: transform 0.3s ease, color 0.3s ease, text-shadow 0.3s ease;
+}
+
+/* Efeito de hover no título */
+.site-title:hover {
+    transform: scale(1.1);
+    color: #042589; /* Cor amarela no hover */
+    text-shadow: 0 0 10px #ffcc00, 0 0 20px #ffcc00; /* Efeito de brilho no hover */
+}
+
+/* Container de login */
+.login-container {
+    display: flex;
+    align-items: center;
+}
+
+/* Estilo dos botões de login e registrar */
+.login-btn, .register-btn {
+    background-color: #043646;
+    color: #ffffff;
+    font-size: 1rem;
+    padding: 10px 20px;
+    margin-left: 15px;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Efeito de hover nos botões */
+.login-btn:hover, .register-btn:hover {
+    background-color: #0080ff;
+    transform: scale(1.05); /* Leve aumento no tamanho */
+    box-shadow: 0 0 15px rgba(0, 191, 255, 0.6); /* Sombra azul */
+}
+
+/* Estilos das Tabelas */
+.tabelas-container {
+    margin-top: 100px; /* Para não sobrepor o cabeçalho */
+    padding: 20px;
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.tabela {
+    margin-bottom: 30px;
+    background-color: #333;
+    border-radius: 8px;
+    padding: 15px;
+    animation: fadeInUp 1s ease-in-out;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th, td {
+    padding: 12px;
+    text-align: center;
+    border: 1px solid #444;
+}
+
+th {
+    background-color: #444;
+    color: #fff;
+    font-size: 1.1rem;
+    transition: color 0.3s ease, text-shadow 0.3s ease;
+}
+
+th:hover {
+    color: #ffcc00; /* Cor amarela no hover */
+    text-shadow: 0 0 15px #ffcc00; /* Efeito de brilho */
+}
+
+td {
+    background-color: #555;
+    color: #fff;
+    font-size: 1rem;
+}
+
+/* Estilo para as tabelas quando o mouse passa por cima */
+table tbody tr {
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+table tbody tr:hover {
+    background-color: #666;
+    transform: translateY(-5px); /* Leve animação de movimento */
+}
+
+/* Animação de entrada para tabelas */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Estilos para telas pequenas */
+@media (max-width: 768px) {
+    .site-title {
+        font-size: 1.8rem;
+    }
+
+    .header-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .login-container {
+        margin-top: 15px;
+    }
+
+    table {
+        font-size: 0.9rem;
+    }
+
+    th, td {
+        padding: 10px;
+    }
+}
